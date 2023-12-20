@@ -16,20 +16,30 @@ export function createToDo(title, description, duedate, priority){
 export function loadTodo(){
     for(const key of Object.keys(localStorage)){
         console.log(key, localStorage.getItem(key));
-
+        
         var storedToDo = localStorage.getItem(key);
         var aboutToDo = JSON.parse(storedToDo);
+        // console.log("using key", key)
+        // console.log("Using todo", aboutToDo.title)
 
-        //create todo title then add other elements inside
-        const toDo = document.createElement("id");
+        const toDo = document.createElement("div");
         toDo.setAttribute("id", key);
-        toDo.textContent = (aboutToDo.title);
+        toDo.textContent = (key);
         document.getElementById("toDoList").append(toDo);
 
-        // const toDoDesc = document.createElement("div");
-        // toDoDesc.setAttribute("id", "description");
-        // toDoDesc.textContent = (aboutToDo.description);
-        // document.getElementById("title").append(toDoDesc);
+        const toDoDesc = document.createElement("id");
+        toDoDesc.setAttribute("id", "description");
+        toDoDesc.textContent = (aboutToDo.description);
+        document.getElementById(key).append(toDoDesc);
+
+        const toDoDate = document.createElement("id");
+        toDoDate.setAttribute("id", "dueDate");
+        toDoDate.textContent = (aboutToDo.duedate);
+        document.getElementById(key).append(toDoDate)
        
+        const toDoPrio = document.createElement("id");
+        toDoPrio.setAttribute("id", "priority");
+        toDoPrio.textContent = (aboutToDo.priority);
+        document.getElementById(key).append(toDoPrio);
     }
 }
