@@ -32,6 +32,16 @@
 
 
 /* form popup */
-.form{
+#form{
+    visibility: hidden;
     background-color: yellow;
 }
+
+/* getting all the divs in the todolist */
+#toDoList div{ 
+    background-color: pink;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+
