@@ -14,7 +14,8 @@ export function loadhomeTab(){
     const form = document.getElementById("form");
     tArea.append(form);
 
-    const toDoList = document.createElement("div");
-    toDoList.setAttribute("id", "toDoList");
-    tArea.append(toDoList);
+    const currentToDo = document.createElement("div");
+    currentToDo.textContent = "Title";
+    currentToDo.setAttribute("id", "currentToDo");
+    tArea.append(currentToDo);
 }
