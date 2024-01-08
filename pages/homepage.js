@@ -20,26 +20,14 @@ export function loadhome(){
     homeTab.textContent = "Home";
     leftTab.append(homeTab);
 
-    const upcomingTab = document.createElement("button");
-    upcomingTab.className = "tabs";
-    upcomingTab.textContent = "Upcoming";
-    leftTab.append(upcomingTab);
-
-    const completedTab = document.createElement("button");
-    completedTab.className = "tabs";
-    completedTab.textContent = "Completed";
-    leftTab.append(completedTab);
-
-    const projectTab = document.createElement("button");
-    projectTab.className = "tabs";
-    projectTab.textContent = "Projects";
-    leftTab.append(projectTab);
-
+    const toDoList = document.createElement("div");
+    toDoList.setAttribute("id", "toDoList");
+    leftTab.append(toDoList);
 
     //right main area of the page
     const taskArea = document.createElement("div");
-    taskArea.className = "taskArea";
-    taskArea.textContent = "task area";
+    taskArea.setAttribute("id", "taskArea");
+    // taskArea.textContent = "task area";
     body.append(taskArea);
 
     const footer = document.createElement("div");
