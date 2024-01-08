@@ -38,10 +38,11 @@
 }
 
 /* getting all the divs in the todolist */
-#toDoList div{ 
+#toDoList{
     background-color: pink;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: flex;
+    flex-direction: column;
+    
 }
 
 
