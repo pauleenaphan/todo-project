@@ -1,4 +1,4 @@
-import {inputTodo, showForm} from "../pages/form.js"
+import {inputTodo, showForm, loadRemove} from "../pages/form.js"
 
 export function loadhomeTab(){
     const tArea = document.getElementById("taskArea");
