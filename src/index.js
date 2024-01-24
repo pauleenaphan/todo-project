@@ -7,6 +7,6 @@ import {loadTodoColumn} from "../pages/todoFunctions.js";
 loadhome();
 loadhomeTab();
 loadTodoColumn();
-// inputTodo();
+
 
 
