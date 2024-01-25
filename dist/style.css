@@ -4,7 +4,7 @@
 }
 
 /* gives all button elements the pointer on hover  */
-button:hover{
+button:hover, #githubicon{
     cursor: pointer;
     color: purple;
 }
@@ -147,3 +147,4 @@ input[type=text]:focus{
     padding: 0px 10px;
     margin-bottom: -1%;
 }
+
