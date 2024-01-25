@@ -35,8 +35,10 @@ export function loadhome(){
     footer.textContent = "Copyright @ 2023 Pauleena Phan";
     
     const githubimg = document.createElement("img");
-    githubimg.setAttribute("id", "githubicon")
-    githubimg.src = "/img/githubicon.png"
+    githubimg.setAttribute("id", "githubicon");
+    githubimg.src = "img/githubicon.png";
+    //cant get github link to work
     footer.append(githubimg);
     page.append(footer);
+    
 }
