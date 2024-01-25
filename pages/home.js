@@ -5,7 +5,7 @@ export function loadhomeTab(){
 
     //creates new task button 
     const newbtn = document.createElement("button");
-    newbtn.textContent = "New Task";
+    newbtn.textContent = "New Task +";
     newbtn.setAttribute("id", "addTodo");
     tArea.append(newbtn);
 
@@ -15,7 +15,7 @@ export function loadhomeTab(){
     tArea.append(form);
 
     const currentToDo = document.createElement("div");
-    currentToDo.textContent = "Title";
+    currentToDo.textContent = " ";
     currentToDo.setAttribute("id", "currentToDo");
     tArea.append(currentToDo);
 }
