@@ -57,12 +57,12 @@ export function loadToDoTask(e){
 
             const toDoDate = document.createElement("id");
             toDoDate.setAttribute("id", "dueDate");
-            toDoDate.textContent = (aboutToDo.duedate);
+            toDoDate.textContent = ("Due Date:  " + aboutToDo.duedate);
             document.getElementById("currentToDo").append(toDoDate)
             
             const toDoPrio = document.createElement("id");
             toDoPrio.setAttribute("id", "priority");
-            toDoPrio.textContent = (aboutToDo.priority);
+            toDoPrio.textContent = ("Priority:  " + aboutToDo.priority);
             document.getElementById("currentToDo").append(toDoPrio);
 
             const xbtn = document.createElement("button");
