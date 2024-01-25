@@ -1,17 +1,24 @@
 *{
     margin: 0;
+    font-family: "Verdana";
+}
+
+/* gives all button elements the pointer on hover  */
+button:hover{
+    cursor: pointer;
+    color: purple;
 }
 
 #page{
     display: grid;
-    background-color: red;
+    background-color: #586F6B;
     grid-template-rows: 1fr 8fr 1fr;
     height: 100vh;
 }
 
 /* heading of the page */
 .header{
-    background-color: rgb(182, 255, 249);
+    background-color: #586F6B;
     font-size: 30px;
     text-align: center;
     padding: 30px;
@@ -19,7 +26,7 @@
 
 
 .body{
-    background-color: lightblue;
+    background-color: #7F9183;
     display: grid;
     grid-template-columns: 1fr 3fr;
     padding: 30px;
@@ -35,6 +42,12 @@
     padding: 30px;
 }
 
+/* getting all the divs in the todolist */
+#toDoList{
+    /* background-color: pink; */
+    display: flex;
+    flex-direction: column;
+}
 
 /* list of the todo buttons on the left tab  */
 #toDoList > button{
@@ -44,38 +57,28 @@
     background: none;
 }
 
-#toDoList > button:hover{
-    color: purple;
-    cursor: pointer;
-}
-
 #taskArea{
-    background-color: white;
     border-radius: 30px;
 }
 
+#taskArea, input[type=text], #submit, #button, #addTodo{
+    background-color: #CFC0BD;
+}
 
 /* new task button */
 #addTodo{
     border:none;
-    background-color: white;
     border-radius: 30px;
     padding: 30px;
     font-size: 20px;
 }
-
-#addTodo:hover{
-    color: purple;
-    cursor: pointer;
-}
-
 
 /* form popup */
 #form{
     visibility: hidden;
     display: flex;
     list-style-type: none;
-    background-color: white;
+    margin: 0 20px;
     justify-content: space-evenly;
 }
 
@@ -94,7 +97,6 @@ input[type=text]:focus{
 #submit{
     font-size: 20px;
     border: none;
-    background-color: white;
 }
 
 #submit:hover{
@@ -102,17 +104,46 @@ input[type=text]:focus{
     cursor: pointer;
 }
 
-/* getting all the divs in the todolist */
-#toDoList{
-    /* background-color: pink; */
-    display: flex;
-    flex-direction: column;
-    
-}
-
-
+/* current to do on the page after clicking its tab */
 #currentToDo{
-    display: flex;
-    gap: 20px;
+    margin-left: 25px;
+    margin-right: 25px;
 }
 
+#currentToDo > #toDoTitle , #description{
+    display:flex;
+    background-color: lightgray;
+    margin: 20px 0;
+    border-radius: 10px;
+    padding: 20px;
+
+}
+
+#currentToDo > #toDoTitle{
+    font-size: 20px;
+}
+
+#currentToDo > #description{
+    font-size: 15px;
+}
+
+#currentToDo > #button{
+    border: none;
+}
+
+#currentToDo > #dueDate , #priority , #button{
+    margin-right: 50px;
+}
+
+.footer{
+    text-align: center;
+    margin: auto;
+    font-size: 20px;
+}
+
+#githubicon{
+    width: 30px;
+    height: 30px;
+    padding: 0px 10px;
+    margin-bottom: -1%;
+}
