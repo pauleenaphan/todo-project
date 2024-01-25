@@ -9,40 +9,110 @@
     height: 100vh;
 }
 
+/* heading of the page */
 .header{
-    background-color: lightgreen;
+    background-color: rgb(182, 255, 249);
+    font-size: 30px;
+    text-align: center;
+    padding: 30px;
 }
+
 
 .body{
     background-color: lightblue;
     display: grid;
     grid-template-columns: 1fr 3fr;
-    gap: 30px;
+    padding: 30px;
+    margin-left: -2%;
 }
 
 .leftTab{
     display: flex;
     flex-direction: column;
+    text-align: center;
+    font-size: 40px;
     gap: 30px;
+    padding: 30px;
+}
+
+
+/* list of the todo buttons on the left tab  */
+#toDoList > button{
+    font-size: 20px;
+    margin: 10px auto;
+    border: none;
+    background: none;
+}
+
+#toDoList > button:hover{
+    color: purple;
+    cursor: pointer;
 }
 
 #taskArea{
     background-color: white;
+    border-radius: 30px;
+}
+
+
+/* new task button */
+#addTodo{
+    border:none;
+    background-color: white;
+    border-radius: 30px;
+    padding: 30px;
+    font-size: 20px;
+}
+
+#addTodo:hover{
+    color: purple;
+    cursor: pointer;
 }
 
 
 /* form popup */
 #form{
     visibility: hidden;
-    background-color: yellow;
+    display: flex;
+    list-style-type: none;
+    background-color: white;
+    justify-content: space-evenly;
+}
+
+input[type=text]{
+    padding: 10px;
+    font-size: 17px;
+    border: none;
+    width: 50%;
+}
+
+input[type=text]:focus{
+    outline:none;
+    border-bottom: 2px solid black;
+}
+
+#submit{
+    font-size: 20px;
+    border: none;
+    background-color: white;
+}
+
+#submit:hover{
+    color: purple;
+    cursor: pointer;
 }
 
 /* getting all the divs in the todolist */
 #toDoList{
-    background-color: pink;
+    /* background-color: pink; */
     display: flex;
     flex-direction: column;
     
 }
 
+
+#currentToDo{
+    display: flex;
+    gap: 20px;
+}
 
