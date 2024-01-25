@@ -2,7 +2,7 @@ export function loadhome(){
     const page = document.getElementById("page");
 
     const header = document.createElement("div");
-    header.textContent = "TODO";
+    header.textContent = "Task you need TODO";
     header.className = "header";
     page.appendChild(header);
 
@@ -15,9 +15,9 @@ export function loadhome(){
     leftTab.className = "leftTab";
     body.append(leftTab);
 
-    const homeTab = document.createElement("button");
+    const homeTab = document.createElement("id");
     homeTab.classname = "tabs";
-    homeTab.textContent = "Home";
+    homeTab.textContent = "Your Task";
     leftTab.append(homeTab);
 
     const toDoList = document.createElement("div");
@@ -32,6 +32,11 @@ export function loadhome(){
 
     const footer = document.createElement("div");
     footer.className = "footer";
-    footer.textContent = "Pauleena Phan";
+    footer.textContent = "Copyright @ 2023 Pauleena Phan";
+    
+    const githubimg = document.createElement("img");
+    githubimg.setAttribute("id", "githubicon")
+    githubimg.src = "/img/githubicon.png"
+    footer.append(githubimg);
     page.append(footer);
 }
