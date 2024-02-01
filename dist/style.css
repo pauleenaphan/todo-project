@@ -87,7 +87,7 @@ input[type=text], #desc{
     font-size: 17px;
     border: none;
     border-radius: 10px;
-    background-color: lightblue;
+    background-color: lightgray;
     width: 50%;
     outline: none;
 }
@@ -113,7 +113,7 @@ input[type=text], #desc{
     margin-right: 25px;
 }
 
-#currentToDo > #toDoTitle , #description{
+#toDoTitle , #description{
     display:flex;
     background-color: lightgray;
     margin: 20px 0;
@@ -122,19 +122,23 @@ input[type=text], #desc{
 
 }
 
-#currentToDo > #toDoTitle{
+#description{
+    height: 300px;
+}
+
+#toDoTitle{
     font-size: 20px;
 }
 
-#currentToDo > #description{
+#description{
     font-size: 15px;
 }
 
-#currentToDo > #button{
+#button{
     border: none;
 }
 
-#currentToDo > #dueDate , #priority , #button{
+#dueDate , #priority , #button{
     margin-right: 50px;
 }
 
