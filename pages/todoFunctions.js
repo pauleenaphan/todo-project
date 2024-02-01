@@ -18,9 +18,6 @@ export function loadTodoColumn(){
     //need to empty list so when it loads again it does not load the one we removed
     document.getElementById("toDoList").innerHTML = " ";
     for(const key of Object.keys(localStorage)){
-        var storedToDo = localStorage.getItem(key);
-        var aboutToDo = JSON.parse(storedToDo);
-
         const toDo = document.createElement("button");
         toDo.setAttribute("id", key);
         toDo.textContent = (key);
