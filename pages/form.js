@@ -10,7 +10,9 @@ export function inputTodo(){
 
 //when you click new task a form will popup
 export function showForm(){
-   document.getElementById("form").style.visibility = 'visible';
+    document.getElementById("form").style.display = "block";
+    //When we click new form we get rid of the current todo tab if the user is on one
+    document.getElementById("currentToDo").innerHTML = " ";
    
 }
 
