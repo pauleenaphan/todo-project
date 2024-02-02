@@ -1,3 +1,5 @@
+import { loadEditArea } from "./form";
+
 //creates the ToDos
 export function createTodo(title, description, duedate, priority){
     //allows multiple values for the value parameter
@@ -51,22 +53,22 @@ export function loadToDoTask(e){
             document.getElementById("currentToDo").append(toDoTitle);
 
             const toDoDesc = document.createElement("id");
-            toDoDesc.setAttribute("id", "description");
+            toDoDesc.setAttribute("id", "toDodescription");
             toDoDesc.textContent = (aboutToDo.description);
             document.getElementById("currentToDo").append(toDoDesc);
 
             const toDoDate = document.createElement("id");
-            toDoDate.setAttribute("id", "dueDate");
-            toDoDate.textContent = ("Due Date:  " + aboutToDo.duedate);
+            toDoDate.setAttribute("id", "toDodueDate");
+            toDoDate.textContent = (aboutToDo.duedate);
             document.getElementById("currentToDo").append(toDoDate)
             
             const toDoPrio = document.createElement("id");
-            toDoPrio.setAttribute("id", "priority");
-            toDoPrio.textContent = ("Priority:  " + aboutToDo.priority);
+            toDoPrio.setAttribute("id", "toDopriority");
+            toDoPrio.textContent = (aboutToDo.priority);
             document.getElementById("currentToDo").append(toDoPrio);
 
             const xbtn = document.createElement("button");
-            xbtn.setAttribute("id", "button");
+            xbtn.setAttribute("id", "xbtn");
             xbtn.textContent = ("Remove Task");
             xbtn.addEventListener('click', removeTodo);
             document.getElementById("currentToDo").append(xbtn);
@@ -74,7 +76,7 @@ export function loadToDoTask(e){
             const editbtn = document.createElement("button");
             editbtn.textContent = "Edit Task"
             editbtn.setAttribute("id", "editTodo");
-            editbtn.addEventListener('click', editTodo);
+            editbtn.addEventListener('click', loadEditArea);
             document.getElementById("currentToDo").append(editbtn);
             
         }
@@ -93,7 +95,17 @@ function removeTodo(){
     document.getElementById("currentToDo").innerHTML = " "
 }
 
-//edits todo
-function editTodo(){
-    
+
+export function replaceTodo(){
+    console.log(document.getElementById("editDesc").value);
+    /*Rather than updating we need to remove the current todo because if we change the title but not 
+    anything else it creates a new todo. THis is another way to edit the todo because we cannot have two 
+    todos with the same title since we use the title as the key*/
+    removeTodo();
+
+    //creates new todo since we delete the old one 
+    createTodo(document.getElementById("editTitle").value, document.getElementById("editDesc").value, document.getElementById("editDueDate").value, document.getElementById("editPriority").value, document.getElementById("editsubmit").value);
+
 }
+
+
