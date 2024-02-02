@@ -41,6 +41,9 @@ export function loadToDoTask(e){
             //empty the div before displaying the new element
             document.getElementById("currentToDo").innerHTML = "";
 
+            //gets rid of the new task form when you click on a task if the form is open
+            document.getElementById("form").style.display = "none";
+            
             //displays the new todo information
             const toDoTitle = document.createElement("id");
             toDoTitle.setAttribute("id", "toDoTitle");
@@ -67,13 +70,19 @@ export function loadToDoTask(e){
             xbtn.textContent = ("Remove Task");
             xbtn.addEventListener('click', removeTodo);
             document.getElementById("currentToDo").append(xbtn);
+
+            const editbtn = document.createElement("button");
+            editbtn.textContent = "Edit Task"
+            editbtn.setAttribute("id", "editTodo");
+            editbtn.addEventListener('click', editTodo);
+            document.getElementById("currentToDo").append(editbtn);
             
         }
     }
 }   
 
 //deletes todo 
-export function removeTodo(){
+function removeTodo(){
     console.log("testing remove");
     var removeTitle = document.getElementById("toDoTitle").innerHTML
     console.log(removeTitle)
@@ -82,4 +91,9 @@ export function removeTodo(){
     //load the column list again so that it shows the element is removed
     loadTodoColumn()
     document.getElementById("currentToDo").innerHTML = " "
+}
+
+//edits todo
+function editTodo(){
+    
 }
