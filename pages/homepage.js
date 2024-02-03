@@ -30,15 +30,15 @@ export function loadhome(){
     // taskArea.textContent = "task area";
     body.append(taskArea);
 
-    const footer = document.createElement("div");
-    footer.className = "footer";
-    footer.textContent = "Copyright @ 2023 Pauleena Phan";
+    // const footer = document.createElement("div");
+    // footer.className = "footer";
+    // footer.textContent = "Copyright @ 2023 Pauleena Phan";
     
-    const githubimg = document.createElement("img");
-    githubimg.setAttribute("id", "githubicon");
-    githubimg.src = "img/githubicon.png";
-    //cant get github link to work
-    footer.append(githubimg);
-    page.append(footer);
+    // const githubimg = document.createElement("img");
+    // githubimg.setAttribute("id", "githubicon");
+    // githubimg.src = "/img/githubicon.png";
+    // //cant get github link to work
+    // footer.append(githubimg);
+    // page.append(footer);
     
 }
