@@ -12,7 +12,7 @@ button:hover, #githubicon{
 #page{
     display: grid;
     background-color: #586F6B;
-    grid-template-rows: 1fr 8fr 1fr;
+    grid-template-rows: 1fr 8fr;
     height: 100vh;
 }
 
@@ -147,14 +147,15 @@ input[type=text], #desc{
 .footer{
     text-align: center;
     margin: auto;
-    font-size: 20px;
+    padding: 20px;
+    font-size: 25px;
+    background-color: #586F6B;
 }
 
-#githubicon{
+img{
     width: 30px;
     height: 30px;
     padding: 0px 10px;
-    margin-bottom: -1%;
 }
 
 #editTodoPopup{
