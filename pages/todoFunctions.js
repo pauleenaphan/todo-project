@@ -12,7 +12,6 @@ export function createTodo(title, description, duedate, priority){
 
     //adds the book to the storage
     localStorage.setItem(title, JSON.stringify(toDo));
-    return(localStorage.getItem(title));
 }
 
 //Loads the todo when a new one is created
@@ -36,20 +35,28 @@ export function loadTodoColumn(){
 
         //check the priors and put then in the right section
         let priority = JSON.parse(localStorage.getItem(key)).priority;
-        if(priority == "highPriority"){
+        if(priority == "High Priority"){
             highPrio.append(toDo);
-        }else if(priority == "mediumPriority"){
+        }else if(priority == "Medium Priority"){
             medPrio.append(toDo);
-        }else if(priority == "lowPriority"){
+        }else if(priority == "Low Priority"){
             lowPrio.append(toDo);
         }
     }
 }
 
 //loads the todo information when its tab is clicked
-export function loadToDoTask(e){
+export function loadToDoTask(titleOrEvent){
+
+    let inputTitle;
+    if(titleOrEvent instanceof Event){
+        inputTitle = titleOrEvent.target.innerHTML;
+    }else{
+        inputTitle = titleOrEvent;
+    }
+    
     console.log("testing loadtodotask")
-    const inputTitle = (e.target).innerHTML
+    // const inputTitle = (e.target).innerHTML
     console.log(inputTitle);
 
     for(const key of Object.keys(localStorage)){
@@ -59,7 +66,7 @@ export function loadToDoTask(e){
             const lcontainer = document.createElement("div");
             lcontainer.setAttribute("id", "lcontainer");
             const rcontainer = document.createElement("div");
-            rcontainer.setAttribute("id", "rcontainer");
+            rcontainer.setAttribute("id", "rcontainer")
             const lrcontainer = document.createElement("div");
             lrcontainer.setAttribute("id", "lrcontainer");
             //empty the div before displaying the new element
@@ -92,14 +99,16 @@ export function loadToDoTask(e){
             lrcontainer.append(lcontainer);
             document.getElementById("currentToDo").append(lrcontainer);
 
-            const xbtn = document.createElement("button");
+            const xbtn = document.createElement("img");
+            xbtn.src = "../img/trash-can.png";
             xbtn.setAttribute("id", "xbtn");
             xbtn.textContent = ("Remove Task");
             xbtn.addEventListener('click', removeTodo);
             rcontainer.append(xbtn);
             // document.getElementById("currentToDo").append(xbtn);
 
-            const editbtn = document.createElement("button");
+            const editbtn = document.createElement("img");
+            editbtn.src = "../img/draw.png";
             editbtn.textContent = "Edit Task"
             editbtn.setAttribute("id", "editTodo");
             editbtn.addEventListener('click', loadEditArea);
@@ -107,7 +116,6 @@ export function loadToDoTask(e){
             lrcontainer.append(rcontainer);
             document.getElementById("currentToDo").append(lrcontainer);
             // document.getElementById("currentToDo").append(editbtn);
-            
         }
     }
 }   
@@ -133,8 +141,13 @@ export function replaceTodo(){
     removeTodo();
 
     //creates new todo since we delete the old one 
-    createTodo(document.getElementById("editTitle").value, document.getElementById("editDesc").value, document.getElementById("editDueDate").value, document.getElementById("editPriority").value, document.getElementById("editsubmit").value);
-
+    createTodo(
+        document.getElementById("editTitle").value, 
+        document.getElementById("editDesc").value, 
+        document.getElementById("editDueDate").value, 
+        document.getElementById("editPriority").value, 
+        document.getElementById("editsubmit").value
+    );
 }
 
 
