@@ -11,14 +11,11 @@ button:hover, #githubicon{
 
 #page{
     display: grid;
-    background-color: #586F6B;
-    grid-template-rows: 1fr 8fr;
     height: 100vh;
 }
 
 /* heading of the page */
 .header{
-    background-color: #586F6B;
     font-size: 30px;
     text-align: center;
     padding: 30px;
@@ -26,60 +23,63 @@ button:hover, #githubicon{
 
 
 .body{
-    background-color: #7F9183;
     display: grid;
     grid-template-columns: 1fr 3fr;
-    padding: 30px;
-    margin-left: -2%;
 }
 
 .leftTab{
+    background-color: black;
     display: flex;
     flex-direction: column;
-    text-align: center;
-    font-size: 40px;
     gap: 30px;
     padding: 30px;
 }
 
-/* getting all the divs in the todolist */
-#toDoList{
-    /* background-color: pink; */
+#todoTitle, .toDoTask{
+    color: white;
+}
+
+.title{
+    color: purple;
+}
+
+#titleContainer{
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
-/* list of the todo buttons on the left tab  */
-#toDoList > button{
-    font-size: 20px;
-    margin: 10px auto;
+#highPrio, #medPrio, #lowPrio, .title{
+    background-color: gray;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+
+.toDoTask{
+    background-color: transparent;
     border: none;
-    background: none;
 }
-
-#taskArea{
-    border-radius: 30px;
-}
-
 #taskArea, input[type=text], #submit, #button, #addTodo{
-    background-color: #CFC0BD;
+    background-color: white;
 }
 
 /* new task button */
-#addTodo{
+#addTodo{ 
+    background-color: grey;
+    color: white;
     border:none;
-    border-radius: 30px;
-    padding: 30px 30px 10px 30px;
-    font-size: 20px;
+    border-radius: 5px;
+
 }
+
 
 /* form popup */
 #form{
     display: none;
     list-style-type: none;
-    margin: 20px;
-}
 
+}
 
 input[type=text], #desc{
     margin: 10px;
