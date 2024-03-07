@@ -22,7 +22,7 @@ export function loadhome(){
     titleContainer.setAttribute("id", "titleContainer");
     leftTab.append(titleContainer);
 
-    const homeTab = document.createElement("div");
+    const homeTab = document.createElement("h1");
     homeTab.setAttribute("id", "todoTitle");
     homeTab.textContent = "Todos";
     titleContainer.append(homeTab);
