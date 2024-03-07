@@ -17,15 +17,32 @@ export function createTodo(title, description, duedate, priority){
 
 //Loads the todo when a new one is created
 export function loadTodoColumn(){
-    //need to empty list so when it loads again it does not load the one we removed
-    document.getElementById("toDoList").innerHTML = " ";
+    const highPrio = document.getElementById("highPrio");
+    const medPrio = document.getElementById("medPrio");
+    const lowPrio = document.getElementById("lowPrio");
+
+    //emptys the list so when it loads againt it won't load the removed todos
+    highPrio.innerHTML = "";
+    medPrio.innerHTML = "";
+    lowPrio.innerHTML = "";
+
+    //loops through all the keys 
     for(const key of Object.keys(localStorage)){
         const toDo = document.createElement("button");
         toDo.setAttribute("id", key);
         toDo.textContent = (key);
         toDo.classList.add("toDoTask");
         toDo.addEventListener("click", loadToDoTask);
-        document.getElementById("toDoList").append(toDo);
+
+        //check the priors and put then in the right section
+        let priority = JSON.parse(localStorage.getItem(key)).priority;
+        if(priority == "highPriority"){
+            highPrio.append(toDo);
+        }else if(priority == "mediumPriority"){
+            medPrio.append(toDo);
+        }else if(priority == "lowPriority"){
+            lowPrio.append(toDo);
+        }
     }
 }
 
@@ -86,20 +103,20 @@ export function loadToDoTask(e){
 //deletes todo 
 function removeTodo(){
     console.log("testing remove");
-    var removeTitle = document.getElementById("toDoTitle").innerHTML
-    console.log(removeTitle)
-    localStorage.removeItem(removeTitle)
+    var removeTitle = document.getElementById("toDoTitle").innerHTML;
+    console.log(removeTitle);
+    localStorage.removeItem(removeTitle);
 
     //load the column list again so that it shows the element is removed
-    loadTodoColumn()
-    document.getElementById("currentToDo").innerHTML = " "
+    loadTodoColumn();
+    document.getElementById("currentToDo").innerHTML = " ";
 }
 
 
 export function replaceTodo(){
     console.log(document.getElementById("editDesc").value);
     /*Rather than updating we need to remove the current todo because if we change the title but not 
-    anything else it creates a new todo. THis is another way to edit the todo because we cannot have two 
+    anything else it creates a new todo. This is another way to edit the todo because we cannot have two 
     todos with the same title since we use the title as the key*/
     removeTodo();
 
