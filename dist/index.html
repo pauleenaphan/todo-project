@@ -18,7 +18,12 @@
                 <input type = "text" id = "dueDate" placeholder = "Due Date">
             </li>
             <li>
-                <input type = "text" id = "priority" placeholder = "Priority">
+                <label> Priority of Todo </label>
+                <select name = "taskPriority" id = "priority">
+                    <option value = "lowPriority"> Low </option>
+                    <option value = "mediumPriority"> Medium </option>
+                    <option value = "highPriority"> High </option>
+                </select>
             </li>
             <li>
                 <input type = "submit" id = "submit" value = "submit">
@@ -41,8 +46,5 @@
                 <input type = "submit" id = "editsubmit" value = "Confirm Edit">
             </li>
         </form>
-        <div class = footer>
-            Copyright @ 2023 Pauleena Phan <a href = "https://pauleenaphan.github.io/todo-project/dist/"><img src = "/img/githubicon.png" alt = "github icon"></a>
-        </div>
     </body>
 </html>
