@@ -8,25 +8,29 @@
     <body>
         <div id="page"></div>
         <form id="form">
-            <li>
-                <input type = "text" id = "title" placeholder = "Title">
+            <li id = "titleLabel">
+                <!-- <label> Title </label> -->
+                <input type = "text" id = "title" placeholder = "Title of your Todo">
             </li>
-            <li>
+            <li id = "descLabel">
+                <!-- <label > Description </label> -->
                 <textarea type = "text" id = "desc" placeholder = "Description"></textarea>
             </li>
+            <div id = "labelContainer">
+                <li id = "dateLabel">
+                    <input type = "text" id = "dueDate" placeholder = "Due Date">
+                </li>
+                <li id = "prioLabel">
+                    <label> Priority of Todo </label>
+                    <select name = "taskPriority" id = "priority">
+                        <option value = "Low Priority"> Low </option>
+                        <option value = "Medium Priority"> Medium </option>
+                        <option value = "High Priority"> High </option>
+                    </select>
+                </li>
+            </div>
             <li>
-                <input type = "text" id = "dueDate" placeholder = "Due Date">
-            </li>
-            <li>
-                <label> Priority of Todo </label>
-                <select name = "taskPriority" id = "priority">
-                    <option value = "lowPriority"> Low </option>
-                    <option value = "mediumPriority"> Medium </option>
-                    <option value = "highPriority"> High </option>
-                </select>
-            </li>
-            <li>
-                <input type = "submit" id = "submit" value = "submit">
+                <input type = "submit" id = "submit" value = "Add Todo">
             </li>
         </form>
         <form id="editTodoPopup">
