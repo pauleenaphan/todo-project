@@ -1,10 +1,7 @@
+import { showForm } from "./form";
+
 export function loadhome(){
     const page = document.getElementById("page");
-
-    const header = document.createElement("div");
-    header.textContent = "Task you need TODO";
-    header.className = "header";
-    page.appendChild(header);
 
     const body = document.createElement("div");
     body.className = "body";
@@ -15,20 +12,64 @@ export function loadhome(){
     leftTab.className = "leftTab";
     body.append(leftTab);
 
-    const homeTab = document.createElement("id");
-    homeTab.classname = "tabs";
-    homeTab.textContent = "Your Task";
-    leftTab.append(homeTab);
-
-    const toDoList = document.createElement("div");
-    toDoList.setAttribute("id", "toDoList");
-    leftTab.append(toDoList);
-
     //right main area of the page
     const taskArea = document.createElement("div");
     taskArea.setAttribute("id", "taskArea");
     // taskArea.textContent = "task area";
     body.append(taskArea);
+
+    const titleContainer = document.createElement("div");
+    titleContainer.setAttribute("id", "titleContainer");
+    leftTab.append(titleContainer);
+
+    const homeTab = document.createElement("div");
+    homeTab.setAttribute("id", "todoTitle");
+    homeTab.textContent = "Todos";
+    titleContainer.append(homeTab);
+
+    const newbtn = document.createElement("button");
+    newbtn.textContent = "+";
+    newbtn.setAttribute("id", "addTodo");
+    titleContainer.append(newbtn);
+
+    const highTitle = document.createElement("id");
+    highTitle.classList.add("title");
+    highTitle.textContent = "High Priority";
+    leftTab.append(highTitle);
+
+    const highPrio = document.createElement("id");
+    highPrio.setAttribute("id", "highPrio")
+    leftTab.append(highPrio);
+
+    const medTitle = document.createElement("id");
+    medTitle.classList.add("title");
+    medTitle.textContent = "Medium Priority";
+    leftTab.append(medTitle);
+
+    const mediumPrio = document.createElement("div");
+    mediumPrio.setAttribute("id", "medPrio");
+    mediumPrio.textContent = "Medium Priority";
+    leftTab.append(mediumPrio);
+
+    const lowTitle = document.createElement("div");
+    lowTitle.classList.add("title");
+    lowTitle.textContent = "Low Priority";
+    leftTab.append(lowTitle);
+
+    const lowPrio = document.createElement("div");
+    lowPrio.setAttribute("id", "lowPrio");
+    lowPrio.textContent = "Low Priority";
+    leftTab.append(lowPrio);
+
+    //When newbtn is pressed, the form will pop up
+    newbtn.addEventListener('click', showForm);
+    const form = document.getElementById("form");
+    taskArea.append(form);
+
+    const currentToDo = document.createElement("div");
+    currentToDo.textContent = " ";
+    currentToDo.setAttribute("id", "currentToDo");
+    taskArea.append(currentToDo);
 
     // const footer = document.createElement("div");
     // footer.className = "footer";
