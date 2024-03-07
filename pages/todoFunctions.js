@@ -56,7 +56,12 @@ export function loadToDoTask(e){
         var storedToDo = localStorage.getItem(key);
         var aboutToDo = JSON.parse(storedToDo);
         if(key == inputTitle){
-
+            const lcontainer = document.createElement("div");
+            lcontainer.setAttribute("id", "lcontainer");
+            const rcontainer = document.createElement("div");
+            rcontainer.setAttribute("id", "rcontainer");
+            const lrcontainer = document.createElement("div");
+            lrcontainer.setAttribute("id", "lrcontainer");
             //empty the div before displaying the new element
             document.getElementById("currentToDo").innerHTML = "";
 
@@ -77,24 +82,31 @@ export function loadToDoTask(e){
             const toDoDate = document.createElement("id");
             toDoDate.setAttribute("id", "toDodueDate");
             toDoDate.textContent = (aboutToDo.duedate);
-            document.getElementById("currentToDo").append(toDoDate)
+            lcontainer.append(toDoDate);
+            // document.getElementById("currentToDo").append(toDoDate);
             
             const toDoPrio = document.createElement("id");
             toDoPrio.setAttribute("id", "toDopriority");
             toDoPrio.textContent = (aboutToDo.priority);
-            document.getElementById("currentToDo").append(toDoPrio);
+            lcontainer.append(toDoPrio);
+            lrcontainer.append(lcontainer);
+            document.getElementById("currentToDo").append(lrcontainer);
 
             const xbtn = document.createElement("button");
             xbtn.setAttribute("id", "xbtn");
             xbtn.textContent = ("Remove Task");
             xbtn.addEventListener('click', removeTodo);
-            document.getElementById("currentToDo").append(xbtn);
+            rcontainer.append(xbtn);
+            // document.getElementById("currentToDo").append(xbtn);
 
             const editbtn = document.createElement("button");
             editbtn.textContent = "Edit Task"
             editbtn.setAttribute("id", "editTodo");
             editbtn.addEventListener('click', loadEditArea);
-            document.getElementById("currentToDo").append(editbtn);
+            rcontainer.append(editbtn);
+            lrcontainer.append(rcontainer);
+            document.getElementById("currentToDo").append(lrcontainer);
+            // document.getElementById("currentToDo").append(editbtn);
             
         }
     }
