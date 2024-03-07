@@ -70,7 +70,7 @@
     font-size: 20px;
 }
 
-.toDoTask:hover{
+.toDoTask:hover, #xbtn:hover, #editTodo:hover, #submit:hover{
     cursor: pointer;
 }
 
@@ -86,7 +86,7 @@
     font-size: 30px;
     padding: 0 8px;
     border-radius: 5px;
-
+    overflow-y: auto;  
 }
 
 #addTodo:hover{
@@ -97,35 +97,66 @@
 
 /* form popup */
 #form{
-    display: none;
     list-style-type: none;
-
 }
 
-input[type=text], #desc{
-    margin: 10px;
-    padding: 10px;
-    font-size: 17px;
+#titleLabel{
+    background-color: #bdbdbd;
+    padding: 200px 200px 100px 50px;
+    text-align: left;
+}
+
+#title{
+    font-size: 70px;
+    margin-bottom: -50px;
     border: none;
-    border-radius: 10px;
-    background-color: lightgray;
-    width: 50%;
     outline: none;
+    background-color: #bdbdbd;
 }
 
 #desc{
-    padding-bottom: 200px;
-} 
-
-#submit{
-    font-size: 20px;
-    border: none;
-    padding: 20px 10px;
+    padding: 50px 200px 200px 50px;
+    padding-bottom: 500px;
+    font-size: 30px;
 }
 
-#submit:hover, #editsubmit:hover{
-    color: purple;
-    cursor: pointer;
+textArea{
+    outline: none;
+}    
+
+#dueDate{
+    outline: none;
+    border: none;
+    font-size: 30px;
+    margin-right: 70px;
+}
+
+#prioLabel{
+    font-size: 30px;
+}
+
+#priority{
+    text-align: center;
+    font-size: 30px;
+    border-radius: 10px;
+    padding: 5px;
+    
+}
+
+#labelContainer{
+    display: flex;
+    align-items: center;
+    padding: 50px;
+
+}
+
+#submit{
+    background-color: #ca82ed;
+    font-size: 30px;
+    border: none;
+    padding: 20px 40px;
+    margin: 0px 0px 0px 50px;
+    border-radius: 10px;
 }
 
 /* current to do on the page after clicking its tab */
@@ -142,7 +173,7 @@ input[type=text], #desc{
 
 #toDodescription{
     background-color: lightgray;
-    height: 300px;
+    height: 600px;
     padding: 20px;
     font-size: 25px;
 }
@@ -174,19 +205,9 @@ input[type=text], #desc{
     background-color: #ca82ed;
 }
 
-
-.footer{
-    text-align: center;
-    margin: auto;
-    padding: 20px;
-    font-size: 25px;
-    background-color: #586F6B;
-}
-
 img{
-    width: 30px;
-    height: 30px;
-    padding: 0px 10px;
+    width: 45px;
+    margin-left: 20px;
 }
 
 #editTodoPopup{
@@ -202,7 +223,6 @@ img{
 }
 
 textarea{
-    background-color: lightgray;
     border-radius: 10px;
     border:none;
     width: 80%;
