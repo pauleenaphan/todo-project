@@ -1,12 +1,6 @@
 *{
     margin: 0;
-    font-family: "Verdana";
-}
-
-/* gives all button elements the pointer on hover  */
-button:hover, #githubicon{
-    cursor: pointer;
-    color: purple;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #page{
@@ -20,7 +14,6 @@ button:hover, #githubicon{
     text-align: center;
     padding: 30px;
 }
-
 
 .body{
     display: grid;
@@ -36,43 +29,71 @@ button:hover, #githubicon{
 }
 
 #todoTitle, .toDoTask{
+    text-align: left;
     color: white;
 }
 
+#todoTitle{
+    font-size: 50px;
+}
+
 .title{
-    color: purple;
+    color: #ca82ed;
+    margin-bottom: -30px;
+    border-radius: 10px 10px 0 0;
+    font-size: 30px;
+    font-weight: bold;
 }
 
 #titleContainer{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin: 20px 0;
 }
 
 #highPrio, #medPrio, #lowPrio, .title{
-    background-color: gray;
-    border-radius: 5px;
-    padding: 10px;
+    background-color: #2d2d2d;
+    padding: 20px 0 0 20px;
 }
 
+#highPrio, #medPrio, #lowPrio{
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 0 10px 10px;
+}
 
 .toDoTask{
     background-color: transparent;
     border: none;
+    padding-bottom: 20px;
+    font-size: 20px;
 }
+
+.toDoTask:hover{
+    cursor: pointer;
+}
+
 #taskArea, input[type=text], #submit, #button, #addTodo{
     background-color: white;
 }
 
 /* new task button */
 #addTodo{ 
-    background-color: grey;
+    background-color: #2d2d2d;
     color: white;
-    border:none;
+    border: none;
+    font-size: 30px;
+    padding: 0 8px;
     border-radius: 5px;
 
 }
 
+#addTodo:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
 
 /* form popup */
 #form{
@@ -109,40 +130,50 @@ input[type=text], #desc{
 
 /* current to do on the page after clicking its tab */
 #currentToDo{
-    margin-left: 25px;
-    margin-right: 25px;
+    margin: 25px;
 }
 
 #toDoTitle , #toDodescription{
-    display:flex;
-    background-color: lightgray;
-    margin: 20px 0;
+    display: flex;
+    margin: 50px 0;
     border-radius: 10px;
-    padding: 20px;
 
 }
 
 #toDodescription{
+    background-color: lightgray;
     height: 300px;
+    padding: 20px;
+    font-size: 25px;
 }
 
 #toDoTitle{
+    font-size: 50px;
+    font-weight: bold;
+}
+
+#lrcontainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#toDodueDate, #toDopriority{
+    padding: 20px 30px;
+    border-radius: 10px;
     font-size: 20px;
+    font-weight: bold;
 }
 
-#toDodescription{
-    font-size: 15px;
+#toDodueDate{
+    background-color: #82c4ed;
+    margin-right: 10px;
 }
 
-#xbtn, #editTodo{
-    border: none;
-    margin-right: 50px;
-    background-color: #CFC0BD;
+#toDopriority{
+    background-color: #ca82ed;
 }
 
-#toDodueDate , #toDopriority , #button{
-    margin-right: 50px;
-}
 
 .footer{
     text-align: center;
