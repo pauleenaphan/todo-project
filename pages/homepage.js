@@ -61,6 +61,16 @@ export function loadhome(){
     lowPrio.textContent = "Low Priority";
     leftTab.append(lowPrio);
 
+    const githubLink = document.createElement("a");
+    githubLink.setAttribute("id", "githubLink");
+    githubLink.href = "github.com";
+    leftTab.append(githubLink);
+
+    const githubIcon = document.createElement("img");
+    githubIcon.setAttribute("id", "githubIcon");
+    githubIcon.src = "../img/githubicon.png";
+    githubLink.append(githubIcon);
+
     //When newbtn is pressed, the form will pop up
     newbtn.addEventListener('click', showForm);
     const form = document.getElementById("form");
@@ -70,16 +80,4 @@ export function loadhome(){
     currentToDo.textContent = " ";
     currentToDo.setAttribute("id", "currentToDo");
     taskArea.append(currentToDo);
-
-    // const footer = document.createElement("div");
-    // footer.className = "footer";
-    // footer.textContent = "Copyright @ 2023 Pauleena Phan";
-    
-    // const githubimg = document.createElement("img");
-    // githubimg.setAttribute("id", "githubicon");
-    // githubimg.src = "/img/githubicon.png";
-    // //cant get github link to work
-    // footer.append(githubimg);
-    // page.append(footer);
-    
 }
