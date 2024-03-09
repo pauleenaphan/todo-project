@@ -63,7 +63,7 @@ export function loadhome(){
 
     const githubLink = document.createElement("a");
     githubLink.setAttribute("id", "githubLink");
-    githubLink.href = "github.com";
+    githubLink.href = "https://pauleenaphan.github.io/todo-project/dist/index.html";
     leftTab.append(githubLink);
 
     const githubIcon = document.createElement("img");
