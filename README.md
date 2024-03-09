@@ -10,12 +10,16 @@ https://pauleenaphan.github.io/todo-project/dist/
 
 # User Functions 
 Creating a new Todo Task
-![image](https://github.com/pauleenaphan/todo-project/assets/77126730/6cd04341-e389-452b-a113-3094d774fc59)
+![image](https://github.com/pauleenaphan/todo-project/assets/77126730/b4548feb-961a-4c50-a02a-30441aa1d948)
+
 
 Viewing your Todo task
-![image](https://github.com/pauleenaphan/todo-project/assets/77126730/1f74170d-b398-48b5-934e-daf52f335872)
+![image](https://github.com/pauleenaphan/todo-project/assets/77126730/ba6234c7-da9e-4e9f-a15c-4686a8408f22)
+
 
 Editing your Todo Task
-![image](https://github.com/pauleenaphan/todo-project/assets/77126730/ab9b2f37-9db1-4ce5-b085-fc99f96f5870)
+![image](https://github.com/pauleenaphan/todo-project/assets/77126730/11409d73-215b-438a-b45d-13684ac2661c)
+
+
 
 
