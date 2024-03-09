@@ -1,187 +1,249 @@
 *{
     margin: 0;
-    font-family: "Verdana";
-}
-
-/* gives all button elements the pointer on hover  */
-button:hover, #githubicon{
-    cursor: pointer;
-    color: purple;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #page{
     display: grid;
-    background-color: #586F6B;
-    grid-template-rows: 1fr 8fr;
     height: 100vh;
 }
 
-/* heading of the page */
-.header{
-    background-color: #586F6B;
-    font-size: 30px;
-    text-align: center;
-    padding: 30px;
-}
-
-
 .body{
-    background-color: #7F9183;
     display: grid;
     grid-template-columns: 1fr 3fr;
-    padding: 30px;
-    margin-left: -2%;
 }
 
+/* left tab of the page */
 .leftTab{
+    background-color: black;
     display: flex;
     flex-direction: column;
-    text-align: center;
-    font-size: 40px;
     gap: 30px;
     padding: 30px;
 }
 
-/* getting all the divs in the todolist */
-#toDoList{
-    /* background-color: pink; */
+#todoTitle, .toDoTask{
+    text-align: left;
+    color: white;
+}
+
+#todoTitle{
+    font-size: 50px;
+}
+
+.title{
+    color: #ca82ed;
+    margin-bottom: -30px;
+    border-radius: 10px 10px 0 0;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#titleContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+#highPrio, #medPrio, #lowPrio, .title{
+    background-color: #2d2d2d;
+    padding: 20px 0 0 20px;
+}
+
+#highPrio, #medPrio, #lowPrio{
     display: flex;
     flex-direction: column;
+    border-radius: 0 0 10px 10px;
 }
 
-/* list of the todo buttons on the left tab  */
-#toDoList > button{
-    font-size: 20px;
-    margin: 10px auto;
+.toDoTask{
+    background-color: transparent;
     border: none;
-    background: none;
+    padding-bottom: 20px;
+    font-size: 20px;
 }
 
-#taskArea{
-    border-radius: 30px;
+#githubIcon{
+    margin: 65% 0 0 -1px;
+    width: 20%;
 }
 
-#taskArea, input[type=text], #submit, #button, #addTodo{
-    background-color: #CFC0BD;
+.toDoTask:hover, #xbtn:hover, #editTodo:hover, #submit:hover, #editsubmit:hover{
+    cursor: pointer;
+}
+
+textarea{
+    resize: none;
 }
 
 /* new task button */
-#addTodo{
-    border:none;
-    border-radius: 30px;
-    padding: 30px 30px 10px 30px;
-    font-size: 20px;
+#addTodo{ 
+    background-color: #2d2d2d;
+    color: white;
+    border: none;
+    font-size: 30px;
+    padding: 0 8px;
+    border-radius: 5px; 
+}
+
+#addTodo:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
 }
 
 /* form popup */
 #form{
-    display: none;
     list-style-type: none;
-    margin: 20px;
 }
 
+#titleLabel{
+    background-color: #bdbdbd;
+    padding: 10% 0 0 48px;
+    text-align: left;
+}
 
-input[type=text], #desc{
-    margin: 10px;
-    padding: 10px;
-    font-size: 17px;
+#title{
+    font-size: 40px;
+    padding-bottom: 1%;
     border: none;
-    border-radius: 10px;
-    background-color: lightgray;
-    width: 50%;
+    font-weight: bold;
     outline: none;
+    background-color: #bdbdbd;
 }
 
 #desc{
-    padding-bottom: 200px;
-} 
-
-#submit{
-    font-size: 20px;
+    padding: 0 0 0 50px;
+    padding-bottom: 35%;
+    font-size: 25px;
+    margin-top: 20px;
+    outline: none;
     border: none;
-    padding: 20px 10px;
 }
 
-#submit:hover, #editsubmit:hover{
-    color: purple;
-    cursor: pointer;
+#dueDate{
+    outline: none;
+    border: none;
+    font-size: 20px;
+    margin: -30% 0 0 0;
+}
+
+#prioLabel{
+    font-size: 20px;
+}
+
+#priority{
+    text-align: center;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 5px;
+    
+}
+
+#labelContainer{
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+
+}
+
+#submit{
+    background-color: #ca82ed;
+    font-size: 20px;
+    border: none;
+    padding: 1% 2%;
+    margin: 0px 0px 0px 50px;
+    border-radius: 10px;
 }
 
 /* current to do on the page after clicking its tab */
 #currentToDo{
-    margin-left: 25px;
-    margin-right: 25px;
+    margin: 25px;
 }
 
 #toDoTitle , #toDodescription{
-    display:flex;
-    background-color: lightgray;
-    margin: 20px 0;
+    display: flex;
+    margin: 50px 0;
     border-radius: 10px;
-    padding: 20px;
 
 }
 
 #toDodescription{
-    height: 300px;
+    background-color: lightgray;
+    height: 500px;
+    padding: 20px;
+    font-size: 25px;
 }
 
 #toDoTitle{
+    font-size: 50px;
+    font-weight: bold;
+}
+
+#lrcontainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#toDodueDate, #toDopriority{
+    padding: 20px 30px;
+    border-radius: 10px;
     font-size: 20px;
+    font-weight: bold;
 }
 
-#toDodescription{
-    font-size: 15px;
+#toDodueDate{
+    background-color: #82c4ed;
+    margin-right: 10px;
 }
 
-#xbtn, #editTodo{
-    border: none;
-    margin-right: 50px;
-    background-color: #CFC0BD;
-}
-
-#toDodueDate , #toDopriority , #button{
-    margin-right: 50px;
-}
-
-.footer{
-    text-align: center;
-    margin: auto;
-    padding: 20px;
-    font-size: 25px;
-    background-color: #586F6B;
+#toDopriority{
+    background-color: #ca82ed;
 }
 
 img{
-    width: 30px;
-    height: 30px;
-    padding: 0px 10px;
+    width: 45px;
+    margin-left: 20px;
 }
 
 #editTodoPopup{
-    background-color: white;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
     border-radius: 10px;
     margin: -50% 0  0 37.5% ;
+    padding-top: 20px;
     display: none;
     width: 30%;
     height: 70%;
     position: absolute;
-    text-align: center;
     list-style: none;
 }
 
-textarea{
-    background-color: lightgray;
-    border-radius: 10px;
-    border:none;
-    width: 80%;
-    padding: 10px;
-    margin-top: 20px;
-    font-size: 20px;
+#editTodoPopup > li{
+    display: flex;
+    flex-direction: column;
 }
 
-#editTitle{
-    margin-top: 80px;
+#editTodoPopup label{
+    margin: 20px auto 5px auto;
+    
+}
+
+#editTodoPopup textarea{
+    background-color: black;
+    color: lightgray;
+    border-color: #2d2d2d 5px;
+    outline: #2d2d2d 5px;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 10px;
+    width: 50%;
+    margin: 0 auto;
 }
 
 #editDesc{
@@ -189,9 +251,15 @@ textarea{
 }
 
 #editsubmit{
-    margin: 20px;
+    margin: 30px auto;
     border: none;
-    background-color:white;
+    border-radius: 20px;
+    padding:  10px 15px;
     font-size: 20px;
+    font-weight: bold;
+    background-color: #ca82ed;
+}
 
+#editsubmit:hover{
+    color: white;
 }
